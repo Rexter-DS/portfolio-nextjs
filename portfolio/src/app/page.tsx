@@ -1,13 +1,12 @@
-import NavBar from '@/components/nav/navbar.component'
-import Image from 'next/image'
+import NavBar from '@/components/nav/navbar-main.component'
 
 export default function Home() {
   return (
     <main
       className='
         flex
-        flex-col
-        mx-24
+        mx-5
+        my-5
       '
     >
       <NavBar></NavBar>
