@@ -3,11 +3,12 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon } from '@heroicons/react/24/solid';
-import LinkedInLogo from '../svg/linkedin.svg';
-import GitHubLogo from '../svg/github.svg';
-import EmailLogo from '../svg/email.svg';
+import NavResume from './nav-resume.component';
+import NavGithub from './nav-github.component';
+import NavLinkedin from './nav-linkedin.component';
+import ButtonContactMe from '../button/button-contact.component';
 
-const NavBarMenu = () => {
+const NavMenu = () => {
   return (
     <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -27,21 +28,24 @@ const NavBarMenu = () => {
           <div className="w-screen max-w-md flex-auto overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 p-3">
             <div className="flex flex-col gap-5">
               <div>
-                <span className="font-bold">Projects</span>
+                <span className="text-base font-bold">Projects</span>
               </div>
               <div>
-                <span className="font-bold">Resume</span>
+                <NavResume></NavResume>
               </div>
               <div className="flex flex-row gap-3 items-center">
                 <div className="w-8 sm:w-10">
-                  <GitHubLogo></GitHubLogo>
+                  <NavGithub></NavGithub>
                 </div>
                 <div className="w-8 sm:w-10">
-                  <LinkedInLogo></LinkedInLogo>
+                  <NavLinkedin></NavLinkedin>
                 </div>
-                <div className="w-8 sm:w-10">
+                {/* <div className="w-8 sm:w-10">
                   <EmailLogo></EmailLogo>
-                </div>
+                </div> */}
+              </div>
+              <div>
+                <ButtonContactMe></ButtonContactMe>
               </div>
             </div>
           </div>
@@ -51,4 +55,4 @@ const NavBarMenu = () => {
   );
 }
 
-export default NavBarMenu;
+export default NavMenu;

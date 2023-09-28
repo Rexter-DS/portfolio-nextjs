@@ -7,13 +7,20 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
+    colors: {
+      'eggshell': '#FAF3DD',
+      'tea-green': '#C8D5B9',
+      'cambridge-blue': '#8FC0A9',
+      'verdigris': '#68B0AB',
+      'paynes-gray': '#696D7D'
+    }
+    // extend: {
+    //   backgroundImage: {
+    //     'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+    //     'gradient-conic':
+    //       'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+    //   },
+    // },
   },
   plugins: [
     require('@headlessui/tailwindcss')({ prefix: 'ui' })
